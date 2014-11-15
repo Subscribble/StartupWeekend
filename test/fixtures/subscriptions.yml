@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sub_name: MyString
+  sub_price: 1
+  exp_date: 2014-11-15
+  pay_date: 2014-11-15
+
+two:
+  sub_name: MyString
+  sub_price: 1
+  exp_date: 2014-11-15
+  pay_date: 2014-11-15
