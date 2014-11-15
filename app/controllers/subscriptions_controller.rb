@@ -1,6 +1,7 @@
 class SubscriptionsController < ApplicationController
   before_action :set_subscription, only: [:show, :edit, :update, :destroy]
 
+  belongs_to :user
   # GET /subscriptions
   # GET /subscriptions.json
   def index
