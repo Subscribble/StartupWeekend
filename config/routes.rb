@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'subscriptions#index'
   resources :subscriptions
 
   # The priority is based upon order of creation: first created -> highest priority.
