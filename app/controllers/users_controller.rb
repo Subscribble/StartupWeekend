@@ -4,8 +4,20 @@ class UsersController < ApplicationController
 	respond_to :html
 
 	def index
-		@users = User.all
-		respond_with(@users)
+		@user = User.new
+		render :new
+		# if session[:id] && User.find(session[:id])
+		# 	render "subscriptions#index"
+		# 	# render :login
+
+		# else
+		# 	# render subscriptions_path
+		# 	@user = User.new
+
+		# 	render :login
+		# end
+		# @users = User.all
+		# respond_with(@users)
 	end
 
 	def show
@@ -25,7 +37,7 @@ class UsersController < ApplicationController
 		@user.password = params[:password]
 		if @user.save!
 			session[:id] = @user.id
-			redirect_to users_show_path
+			redirect_to subscriptions_path
 		else
 			render :new
 		end

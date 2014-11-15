@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  resources :users
-
-  root 'subscriptions#index'
+  resources :users do
+    # resources :subscriptions
+  end
   resources :subscriptions
+
+  # get "users/login" => 'users#login'
+  # post "users/login" => 'users#login'
+
+  root 'users#index'
+  # resources :subscriptions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
