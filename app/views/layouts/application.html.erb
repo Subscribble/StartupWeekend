@@ -10,10 +10,30 @@
     <link href="http://code.jboxcdn.com/0.3.2/jBox.css" rel="stylesheet">
     <script src="http://fgnass.github.io/spin.js/spin.min.js"></script>
     <%= csrf_meta_tags %>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <!-- <%=image_tag "subscribble.png"%> -->
+      </a>
+
+    </div>
+      <a href="http://www.subscribble.co"><button type="button" class="btn btn-default navbar-btn pull-right">Sign Out <i class="glyphicon glyphicon-off"></i></button></a>
+      <a href="http://www.subscribble.co"><button type="button" class="btn btn-default navbar-btn pull-right">Settings <i class="glyphicon glyphicon-cog"></i></button></a>
+  </div>
+    </nav>
+    <div class="container">
     <%= yield %>
+    </div>
   </body>
 </html>

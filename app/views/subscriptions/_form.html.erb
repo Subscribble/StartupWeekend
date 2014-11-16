@@ -12,22 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :sub_name %><br>
+    <%= f.label :name %><br>
     <%= f.text_field :sub_name %>
   </div>
   <div class="field">
-    <%= f.label :sub_price %><br>
+    <%= f.label :price %><br>
     <%= f.number_field :sub_price %>
   </div>
   <div class="field">
-    <%= f.label :exp_date %><br>
+    <%= f.label :expiration_date %><br>
     <%= f.date_select :exp_date %>
   </div>
   <div class="field">
-    <%= f.label :pay_date %><br>
+    <%= f.label :payment_date %><br>
     <%= f.date_select :pay_date %>
   </div>
+  <br>
   <div class="actions">
-    <%= f.submit %>
+    <td><button class="btn btn-success" id="destroy"><i class="glyphicon glyphicon-plus-sign"></i><% f.submit %> Save Changes</button></td>
   </div>
 <% end %>

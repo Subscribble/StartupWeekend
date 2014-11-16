@@ -10,32 +10,34 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<form class="form-horizontal">
+  <div>
     <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
   </div>
-  <div class="field">
+  <div>
     <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </div>
-  <div class="field">
+  <div>
     <%= f.label :address %><br>
     <%= f.text_area :address %>
   </div>
-  <div class="field">
+  <div>
     <%= f.label :phone %><br>
     <%= f.number_field :phone %>
   </div>
-  <div class="field">
+  <div>
     <%= f.label :email %>*<br>
     <%= f.text_field :email %>
   </div>
-  <div class="field">
+  <div>
     <%= f.label :password_hash %>*<br>
     <%= f.text_field :password_hash %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+</form>
+
 <% end %>

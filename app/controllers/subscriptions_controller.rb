@@ -1,6 +1,5 @@
 class SubscriptionsController < ApplicationController
   before_action :set_subscription, only: [:show, :edit, :update, :destroy]
-
   # GET /subscriptions
   # GET /subscriptions.json
   def index
@@ -11,6 +10,8 @@ class SubscriptionsController < ApplicationController
   # GET /subscriptions/1
   # GET /subscriptions/1.json
   def show
+    # format.json { render :json => @subscription }
+    # respond_to :json
   end
 
   # GET /subscriptions/new
