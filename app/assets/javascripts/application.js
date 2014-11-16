@@ -139,8 +139,9 @@ var subs = [{
     "name": "Amazon Prime",
     "price": 79,
     "tag": "Shopping",
+    "annual": true,
     "exp_date": "2015-06-04",
-    "pay_date": "2015-06-04"
+    "pay_date": "2015-06-01"
 // }, {
 //     "name": "Roku",
 //     "price": 8,
