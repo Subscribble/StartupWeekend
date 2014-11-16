@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141115193748) do
     t.date     "exp_date"
     t.date     "pay_date"
     t.boolean  "monthly"
+    t.boolean  "annual"
     t.string   "tag"
     t.string   "url"
     t.integer  "user_id"

@@ -18,7 +18,7 @@ class SubscriptionsControllerTest < ActionController::TestCase
 
   test "should create subscription" do
     assert_difference('Subscription.count') do
-      post :create, subscription: { exp_date: @subscription.exp_date, pay_date: @subscription.pay_date, sub_name: @subscription.sub_name, sub_price: @subscription.sub_price }
+      post :create, subscription: { exp_date: @subscription.exp_date, pay_date: @subscription.pay_date, name: @subscription.name, price: @subscription.price }
     end
 
     assert_redirected_to subscription_path(assigns(:subscription))
@@ -35,7 +35,7 @@ class SubscriptionsControllerTest < ActionController::TestCase
   end
 
   test "should update subscription" do
-    patch :update, id: @subscription, subscription: { exp_date: @subscription.exp_date, pay_date: @subscription.pay_date, sub_name: @subscription.sub_name, sub_price: @subscription.sub_price }
+    patch :update, id: @subscription, subscription: { exp_date: @subscription.exp_date, pay_date: @subscription.pay_date, name: @subscription.name, price: @subscription.price }
     assert_redirected_to subscription_path(assigns(:subscription))
   end
 

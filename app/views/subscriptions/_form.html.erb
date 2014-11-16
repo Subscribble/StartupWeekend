@@ -16,16 +16,34 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :type_of_subscription %><br>
+    <%= f.check_box :monthly %> Monthly 
+    <%= f.check_box :annual %> Annual 
+  </div>
+  <br>
+  <div class="field">
     <%= f.label :price %><br>
     <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :expiration_date %><br>
-    <%= f.date_select :exp_date %>
+    <%= f.label :expires_on %><br>
+    <%= f.date_select :exp_date, :value => @year_from_today %>
   </div>
   <div class="field">
     <%= f.label :payment_date %><br>
     <%= f.date_select :pay_date %>
+  </div>
+  <div class="field">
+    <%= f.label :tag %><br>
+    <select name="subscription[tag]">
+  <option></option>
+<i class="glyphicon glyphicon-film"></i>
+  <option>Movies</option>
+  <option>Music</option>
+  <option>Phone</option>
+  <option>Fitness</option>
+
+</select>
   </div>
   <br>
   <div class="actions">

@@ -2,9 +2,7 @@
   <h1>Subscribble
     <small>Save Time, Save Money, Save Hassle</small></h1>
 </div>
-<button class="btn btn-success" id="destroy"><i class="glyphicon glyphicon-tag"></i> Media</button>
-<button class="btn btn-info" id="destroy"><i class="glyphicon glyphicon-tag"></i> Print</button>
-<button class="btn btn-warning" id="destroy"><i class="glyphicon glyphicon-tag"></i> Fitness</button>
+
 
 
 
@@ -16,12 +14,13 @@
   <a href="#" class="alert-link">Netflix</a>
   subscription is going to expire within a week.
 </div>
-<input type="button" id="import-gmail" data-confirm="The Application Subscribble is requesting permission to access your Google Account" value="Import Email from Google Account" />
+<input type="button" id="import-gmail" data-confirm="The Application Subscribble is requesting permission to access your Google Account" value="Import Subscriptions from Email" />
 <h3>Your Subscriptions</h3>
+<span id="selector" hidden>aklsgd</span>
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Name></th>
+      <th>Name</th>
       <th>Price</th>
       <th>Next Payment Due</th>
       <th>Expires</th>
@@ -29,14 +28,14 @@
     </tr>
   </thead>
   <tbody id="main">
+    <% tag_hash = { "Movies" => "glyphicon-film", "Music" => "glyphicon-music", "Phone"=> "glyphicon-phone" ,"Shopping" => "glyphicon-shopping-cart", "Fitness" => "glyphicon-user", "Print" => "glyphicon-book" }%>
     <% @subscriptions.each do |subscription| %>
       <tr>
         <td>
-<i class="glyphicon glyphicon-film"></i>
-
+          <i class="glyphicon <%= tag_hash[subscription.tag] %>"></i>
           <%= subscription.name %></td>
-        <td>$<%= subscription.price %><small>/mo</small></td>
-        <td><%= subscription.pay_date.to_formatted_s(:long_ordinal) %></td>
+        <td>$<%= subscription.price %><small><% if subscription.monthly %>/mo<% else %>/yr<%end%></small></td>
+        <td><%= subscription.pay_date.to_formatted_s(:long_ordinal)[0..-7] %></td>
         <td><%= subscription.exp_date.to_formatted_s(:long_ordinal) %></td>
         <td><a href=<%= subscription_path(subscription) %>><button class="btn btn-primary" id="destroy">
               <i class="glyphicon glyphicon-search"></i>
@@ -46,7 +45,7 @@
               <i class="glyphicon glyphicon-pencil"></i>
               Edit</button></a>
         </td>
-        <td><a href=<%=subscription.id %>><button class="btn btn-danger" id="destroy">
+        <td><a href=<%=subscription.url %>><button class="btn btn-danger" id="destroy">
               <i class="glyphicon glyphicon-trash"></i>
               Unsubscribe</button></a>
         </td>
