@@ -1,5 +1,6 @@
 <h1>Subscribble</h1>
-<table>
+<input type="button" id="import-gmail" data-confirm="The Application Subscribble is requesting permission to access your Google Account" value="Import Email from Google Account" />
+<table class="rwd-table">
   <thead>
     <tr>
       <th>Name</th>
@@ -9,7 +10,7 @@
       <th colspan="4"></th>
     </tr>
   </thead>
-  <tbody>
+  <tbody id="main">
     <% @subscriptions.each do |subscription| %>
       <tr>
         <td><%= subscription.sub_name %></td>
