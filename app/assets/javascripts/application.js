@@ -73,42 +73,42 @@ $(function() {
         highlight: "#FF5A5E",
         label: "Movies",
         labelColor: 'white',
-        labelFontSize: 50
+        labelFontSize: 25
     }, {
         value: $("#main .glyphicon-music").size(),
         color: "#46BFBD",
         highlight: "#5AD3D1",
         label: "Music",
         labelColor: 'white',
-        labelFontSize: '25'
+        labelFontSize: 25
     }, {
         value: $("#main .glyphicon-shopping-cart").size(),
         color: "#FDB45C",
         highlight: "#FFC870",
         label: "Shopping",
         labelColor: 'white',
-        labelFontSize: '25'
+        labelFontSize: 25
     }, {
         value: $("#main .glyphicon-phone").size(),
         color: "blue",
         highlight: "blue",
         label: "Phone",
         labelColor: 'white',
-        labelFontSize: '25'
+        labelFontSize: 25
     }, {
         value: $("#main .glyphicon-user").size(),
         color: "purple",
         highlight: "purple",
         label: "Fitness",
         labelColor: 'white',
-        labelFontSize: '25'
+        labelFontSize: 25
     }, {
         value: $("#main .glyphicon-book").size(),
         color: "brown",
         highlight: "brown",
         label: "Print",
         labelColor: 'white',
-        labelFontSize: '25'
+        labelFontSize: 25
     });
 
     console.table(data);
