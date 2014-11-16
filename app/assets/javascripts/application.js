@@ -231,27 +231,34 @@ var subs = [{
     "name": "Amazon Prime",
     "price": 79,
     "tag": "Shopping",
+    "annual": true,
     "exp_date": "2015-06-04",
     "pay_date": "2015-06-04"
-        // }, {
-        //     "name": "Roku",
-        //     "price": 8,
-        //     "tag": "Movies",
-        //     "exp_date": "2014-11-15",
-        //     "pay_date": "2014-11-15"
 }, {
-    //     "name": "Microsoft Office Suite 365",
-    //     "price": 40,
-    //     "tag": "Shopping",
-    //     "exp_date": "2014-11-15",
-    //     "pay_date": "2014-11-15"
-    // }, {
     "name": "Fitness Pal",
     "price": 5,
     "tag": "Fitness",
     "monthly": true,
     "exp_date": "2015-03-20",
     "pay_date": "2014-12-12"
+        // }, {
+        //     "name": "Roku",
+        //     "price": 8,
+        //     "tag": "Movies",
+        //     "exp_date": "2014-11-15",
+        //     "pay_date": "2014-11-15"
+        // }, {
+        //     "name": "Roku",
+        //     "price": 8,
+        //     "tag": "Movies",
+        //     "exp_date": "2014-11-15",
+        //     "pay_date": "2014-11-15"
+        //     "name": "Microsoft Office Suite 365",
+        //     "price": 40,
+        //     "tag": "Shopping",
+        //     "exp_date": "2014-11-15",
+        //     "pay_date": "2014-11-15"
+        // }, {
         // }, {
         //     "name": "Apple Care",
         //     "price": 27,

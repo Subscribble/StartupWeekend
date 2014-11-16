@@ -1,5 +1,6 @@
 <div class="page-header">
-  <h1>Subscribble
+  <h1>
+    <%= image_tag "unnamed.png", size: "45" %>ubscribble
     <small>Save Time, Save Money, Save Hassle</small></h1>
 </div>
 <div class="alert alert-warning alert-dismissible" role="alert">
@@ -11,7 +12,11 @@
 </div>
 <input type="button" id="import-gmail" data-confirm="The Application Subscribble is requesting permission to access your Google Account" value="Import Subscriptions from Email" />
 <h3>Your Subscriptions</h3>
-<span id="selector" hidden>aklsgd</span>
+<button class="tag-movies"><i class="glyphicon glyphicon-film"></i></button>
+<button class="tag-music"><i class="glyphicon glyphicon-music"></i></button>
+<button class="tag-phone"><i class="glyphicon glyphicon-phone"></i></button>
+<button class="tag-shopping"><i class="glyphicon glyphicon-shopping-cart"></i></button>
+<button class="tag-print"><i class="glyphicon glyphicon-book"></i></button>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -25,7 +30,7 @@
   <tbody id="main">
     <% tag_hash = { "Movies" => "glyphicon-film", "Music" => "glyphicon-music", "Phone"=> "glyphicon-phone" ,"Shopping" => "glyphicon-shopping-cart", "Fitness" => "glyphicon-user", "Print" => "glyphicon-book" }%>
     <% @subscriptions.each do |subscription| %>
-      <tr>
+      <tr class="<%= subscription.tag %>">
         <td>
           <i class="glyphicon <%= tag_hash[subscription.tag] %>"></i>
           <%= subscription.name %></td>
