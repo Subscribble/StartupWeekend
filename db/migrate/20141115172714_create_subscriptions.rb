@@ -6,6 +6,7 @@ class CreateSubscriptions < ActiveRecord::Migration
 			t.date :exp_date
 			t.date :pay_date
 			t.boolean :monthly
+			t.boolean :annual
 			t.string :tag
 			t.string :url
 			t.belongs_to :user

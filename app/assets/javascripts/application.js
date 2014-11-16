@@ -82,87 +82,88 @@ var dothis = function() {
 
 var subs = [{
     "name": "Netflix",
-    "price": 20,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "Hulu",
-    "price": 15,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "Maxim Magazine",
-    "price": 30,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "Time Magazine",
-    "price": 45,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "Gym membership",
-    "price": 27,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "Pandora",
-    "price": 15,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "Spotify",
-    "price": 21,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "Dollar Shave Club",
-    "price": 42,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "AOL Music",
-    "price": 23,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "Futurist magazine",
-    "price": 50,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
+    "price": 18,
+    "tag": "Movies",
+    "monthly": true,
+    "url": "https://www.netflix.com/YourAccount?lnkctr=mhSS",
+    "exp_date": "2014-11-22",
+    "pay_date": "2014-11-18"
+// }, {
+//     "name": "Hulu",
+//     "price": 15,
+//     "tag": "Movies",
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
+// }, {
+//     "name": "Maxim Magazine",
+//     "price": 30,
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
+// }, {
+//     "name": "Time Magazine",
+//     "price": 45,
+//     "tag": "Print",
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
+// }, {
+//     "name": "Gym membership",
+//     "price": 27,
+//     "tag": "Fitness",
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
+// }, {
+//     "name": "Pandora",
+//     "price": 15,
+//     "tag": "Music",
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
+// }, {
+//     "name": "Spotify",
+//     "price": 21,
+//     "tag": "Music",
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
+// }, {
+//     "name": "Dollar Shave Club",
+//     "price": 42,
+//     "tag": "Shopping",
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
+// }, {
+//     "name": "AOL Music",
+//     "price": 23,
+//     "tag": "Music",
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
 }, {
     "name": "Amazon Prime",
-    "price": 17,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
+    "price": 79,
+    "tag": "Shopping",
+    "exp_date": "2015-06-04",
+    "pay_date": "2015-06-04"
+// }, {
+//     "name": "Roku",
+//     "price": 8,
+//     "tag": "Movies",
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
 }, {
-    "name": "Roku",
-    "price": 5,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "OneDrive",
-    "price": 29,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "Microsoft Office Suite 365",
-    "price": 40,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "Adobe Creative Cloud",
-    "price": 25,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
+//     "name": "Microsoft Office Suite 365",
+//     "price": 40,
+//     "tag": "Shopping",
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
+// }, {
     "name": "Fitness Pal",
-    "price": 32,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "Apple Care",
-    "price": 27,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
+    "price": 5,
+    "tag": "Fitness",
+    "monthly": true,
+    "exp_date": "2015-03-20",
+    "pay_date": "2014-12-12"
+// }, {
+//     "name": "Apple Care",
+//     "price": 27,
+//     "tag": "Shopping",
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
 }];

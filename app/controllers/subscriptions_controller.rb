@@ -17,6 +17,7 @@ class SubscriptionsController < ApplicationController
   # GET /subscriptions/new
   def new
     @subscription = Subscription.new
+    @year_from_today = Date.today + 1.year
   end
 
   # GET /subscriptions/1/edit
@@ -83,7 +84,7 @@ class SubscriptionsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def subscription_params
-    params.require(:subscription).permit(:name, :price, :exp_date, :pay_date)
+    params.require(:subscription).permit(:name, :price, :exp_date, :pay_date, :tag)
   end
 
 end
