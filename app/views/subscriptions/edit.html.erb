@@ -1,6 +1,8 @@
 <h1>Editing subscription</h1>
 
 <%= render 'form' %>
+<br>
 
-<%= link_to 'Show', @subscription %> |
-<%= link_to 'Back', subscriptions_path %>
+<td><a href=<%= subscriptions_path %>><button class="btn btn-primary" id="destroy"><i class="glyphicon glyphicon-arrow-left"></i> Back</button></a></td>
+
+<!-- <td><a href=<%= @subscription %>><button class="btn btn-primary" id="destroy"><i class="glyphicon glyphicon-search"></i> Show</button></a></td> -->

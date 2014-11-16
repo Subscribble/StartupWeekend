@@ -1,24 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Sub name:</strong>
+  <strong>Name:</strong>
   <%= @subscription.sub_name %>
 </p>
 
 <p>
-  <strong>Sub price:</strong>
+  <strong>Price:</strong>
   <%= @subscription.sub_price %>
 </p>
 
 <p>
-  <strong>Exp date:</strong>
+  <strong>Expiration date:</strong>
   <%= @subscription.exp_date %>
 </p>
 
 <p>
-  <strong>Pay date:</strong>
+  <strong>Payment date:</strong>
   <%= @subscription.pay_date %>
 </p>
 
-<%= link_to 'Edit', edit_subscription_path(@subscription) %> |
-<%= link_to 'Back', subscriptions_path %>
+<td><a href=<%= subscriptions_path %>><button class="btn btn-primary" id="destroy"><i class="glyphicon glyphicon-arrow-left"></i> Back</button></a></td>
+
+<td><a href=<%=edit_subscription_path(@subscription) %>><button class="btn btn-primary" id="destroy">
+                <i class="glyphicon glyphicon-pencil"></i> Edit</button></a>
+        </td>
