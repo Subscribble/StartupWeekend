@@ -46,122 +46,123 @@ var dothis = function() {
         trail: 60, // Afterglow percentage
         shadow: false, // Whether to render a shadow
         hwaccel: false, // Whether to use hardware acceleration
-        className: 'spinner', // The CSS class to assign to the spinner
-        zIndex: 2e9, // The z-index (defaults to 2000000000)
+        classsub_Name: 'spinner', // The CSS class to assign to the spinner
+        zIndesub_x: 2e9, // The z-index (defaults to 2000000000)
         top: '50%', // Top position relative to parent
         left: '50%' // Left position relative to parent
     };
     var target = document.getElementById('main');
     var spinner = new Spinner(opts);
 
-    // $.ajax({
-    //     url: "subs",
-    //     data: {},
-    //     beforeSend: function() {
-    //         spinner.spin(target);
-    //     },
-    //     success: function(data) {
-    //         $(".spinner").remove();
-    //         console.log(data);
+    $.ajax({
+        url: "/subscriptions/batch_create",
+        type: "POST",
+        data: { ajax: subs },
+        beforeSend: function() {
+            spinner.spin(target);
+        },
+        success: function(data) {
+            $(".spinner").remove();
+            console.log(data);
 
-    //     },
-    //     dataType: "json"
-    // });
-    spinner.spin(target);
-    setTimeout(function() {
-        $(".spinner").remove();
-        subs.forEach(function(i) {
-            $("#main").append("<tr><td>" + i.name + "</td><td>" + i.price + "</td><td>" + i.exp_date + "</td><td>" + i.pay_date + "</td></tr>");
-        });
-    }, 1000);
+        },
+        dataType: "json"
+    });
+    // spinner.spin(target);
+    // setTimeout(function() {
+    //     $(".spinner").remove();
+    //     subs.forEach(function(i) {
+    //         $("#main").append("<tr><td>" + i.sub_name + "</td><td>" + i.price + "</td><td>" + i.exp_date + "</td><td>" + i.pay_date + "</td></tr>");
+    //    sub_ });
+    // }, 1000);
 
 };
 
 
 
 var subs = [{
-    "name": "Netflix",
-    "price": 20,
+    "sub_name": "Netflix",
+    "sub_price": 20,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Hulu",
-    "price": 15,
+    "sub_name": "Hulu",
+    "sub_price": 15,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Maxim Magazine",
-    "price": 30,
+    "sub_name": "Maxim Magazine",
+    "sub_price": 30,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Time Magazine",
-    "price": 45,
+    "sub_name": "Time Magazine",
+    "sub_price": 45,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Gym membership",
-    "price": 27,
+    "sub_name": "Gym membership",
+    "sub_price": 27,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Pandora",
-    "price": 15,
+    "sub_name": "Pandora",
+    "sub_price": 15,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Spotify",
-    "price": 21,
+    "sub_name": "Spotify",
+    "sub_price": 21,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Dollar Shave Club",
-    "price": 42,
+    "sub_name": "Dollar Shave Club",
+    "sub_price": 42,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "AOL Music",
-    "price": 23,
+    "sub_name": "AOL Music",
+    "sub_price": 23,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Futurist magazine",
-    "price": 50,
+    "sub_name": "Futurist magazine",
+    "sub_price": 50,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Amazon Prime",
-    "price": 17,
+    "sub_name": "Amazon Prime",
+    "sub_price": 17,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Roku",
-    "price": 5,
+    "sub_name": "Roku",
+    "sub_price": 5,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "OneDrive",
-    "price": 29,
+    "sub_name": "OneDrive",
+    "sub_price": 29,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Microsoft Office Suite 365",
-    "price": 40,
+    "sub_name": "Microsoft Office Suite 365",
+    "sub_price": 40,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Adobe Creative Cloud",
-    "price": 25,
+    "sub_name": "Adobe Creative Cloud",
+    "sub_price": 25,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Fitness Pal",
-    "price": 32,
+    "sub_name": "Fitness Pal",
+    "sub_price": 32,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }, {
-    "name": "Apple Care",
-    "price": 27,
+    "sub_name": "Apple Care",
+    "sub_price": 27,
     "exp_date": "2014-11-15",
     "pay_date": "2014-11-15"
 }];

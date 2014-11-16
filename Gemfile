@@ -31,6 +31,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'rack_session_access'
 
+gem 'money'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

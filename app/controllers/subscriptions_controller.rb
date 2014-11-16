@@ -39,6 +39,18 @@ class SubscriptionsController < ApplicationController
     end
   end
 
+  def batch_create
+
+    array = params["ajax"].values
+    puts "-============================"
+    puts array
+    array.each do |subscription_data|
+      puts subscription_data
+      Subscription.create!(subscription_data)
+    end
+    redirect_to "/subscriptions"
+  end
+
   # PATCH/PUT /subscriptions/1
   # PATCH/PUT /subscriptions/1.json
   def update
@@ -71,6 +83,7 @@ class SubscriptionsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def subscription_params
-    params.require(:subscription).permit(:sub_name, :sub_price, :exp_date, :pay_date)
+    params.require(:subscription).permit(:name, :price, :exp_date, :pay_date)
   end
+
 end

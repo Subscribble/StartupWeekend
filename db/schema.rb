@@ -14,10 +14,13 @@
 ActiveRecord::Schema.define(version: 20141115193748) do
 
   create_table "subscriptions", force: true do |t|
-    t.string   "sub_name"
-    t.integer  "sub_price"
+    t.string   "name"
+    t.integer  "price"
     t.date     "exp_date"
     t.date     "pay_date"
+    t.boolean  "monthly"
+    t.string   "tag"
+    t.string   "url"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

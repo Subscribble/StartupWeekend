@@ -63,6 +63,8 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
     minitest (5.4.3)
+    money (6.4.0)
+      i18n (>= 0.6.4, <= 0.7.0.beta1)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -160,6 +162,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  money
   omniauth
   omniauth-facebook
   omniauth-linkedin

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # post "users/login" => 'users#login'
 
   post '/' => 'subscriptions#index'
+  post '/subscriptions/batch_create' => 'subscriptions#batch_create'
   # resources :subscriptions
 
   # The priority is based upon order of creation: first created -> highest priority.
