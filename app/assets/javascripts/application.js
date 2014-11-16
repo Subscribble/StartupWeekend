@@ -68,48 +68,50 @@ $(function() {
     // }
     var data = [];
     data.push({
-        value: $(".glyphicon-film").size(),
+        value: $("#main .glyphicon-film").size(),
         color: "#F7464A",
         highlight: "#FF5A5E",
         label: "Movies",
         labelColor: 'white',
         labelFontSize: 50
     }, {
-        value: $(".glyphicon-music").size(),
+        value: $("#main .glyphicon-music").size(),
         color: "#46BFBD",
         highlight: "#5AD3D1",
         label: "Music",
         labelColor: 'white',
         labelFontSize: '25'
     }, {
-        value: $(".glyphicon-shopping-cart").size(),
+        value: $("#main .glyphicon-shopping-cart").size(),
         color: "#FDB45C",
         highlight: "#FFC870",
         label: "Shopping",
         labelColor: 'white',
         labelFontSize: '25'
     }, {
-        value: $(".glyphicon-phone").size(),
+        value: $("#main .glyphicon-phone").size(),
         color: "blue",
         highlight: "blue",
         label: "Phone",
         labelColor: 'white',
         labelFontSize: '25'
     }, {
-        value: $(".glyphicon-user").size(),
+        value: $("#main .glyphicon-user").size(),
         color: "purple",
         highlight: "purple",
         label: "Fitness",
         labelColor: 'white',
         labelFontSize: '25'
     }, {
-        value: $(".glyphicon-book").size(),
+        value: $("#main .glyphicon-book").size(),
         color: "brown",
         highlight: "brown",
         label: "Print",
         labelColor: 'white',
         labelFontSize: '25'
     });
+
+    console.table(data);
 
     var ctx = $("#myChart").get(0).getContext("2d");
     new Chart(ctx).Pie(data, options);
@@ -451,88 +453,6 @@ var Chart = function(context) {
         context.scale(window.devicePixelRatio, window.devicePixelRatio);
     }
 
-    this.PolarArea = function(data, options) {
-
-        chart.PolarArea.defaults = {
-            scaleOverlay: true,
-            scaleOverride: false,
-            scaleSteps: null,
-            scaleStepWidth: null,
-            scaleStartValue: null,
-            scaleShowLine: true,
-            scaleLineColor: "rgba(0,0,0,.1)",
-            scaleLineWidth: 1,
-            scaleShowLabels: true,
-            scaleLabel: "<%=value%>",
-            scaleFontFamily: "'Arial'",
-            scaleFontSize: 12,
-            scaleFontStyle: "normal",
-            scaleFontColor: "#666",
-            scaleShowLabelBackdrop: true,
-            scaleBackdropColor: "rgba(255,255,255,0.75)",
-            scaleBackdropPaddingY: 2,
-            scaleBackdropPaddingX: 2,
-            segmentShowStroke: true,
-            segmentStrokeColor: "#fff",
-            segmentStrokeWidth: 2,
-            animation: true,
-            animationSteps: 100,
-            animationEasing: "easeOutBounce",
-            animateRotate: true,
-            animateScale: false,
-            onAnimationComplete: null
-        };
-
-        var config = (options) ? mergeChartConfig(chart.PolarArea.defaults, options) : chart.PolarArea.defaults;
-
-        return new PolarArea(data, config, context);
-    };
-
-    this.Radar = function(data, options) {
-
-        chart.Radar.defaults = {
-            scaleOverlay: false,
-            scaleOverride: false,
-            scaleSteps: null,
-            scaleStepWidth: null,
-            scaleStartValue: null,
-            scaleShowLine: true,
-            scaleLineColor: "rgba(0,0,0,.1)",
-            scaleLineWidth: 1,
-            scaleShowLabels: false,
-            scaleLabel: "<%=value%>",
-            scaleFontFamily: "'Arial'",
-            scaleFontSize: 12,
-            scaleFontStyle: "normal",
-            scaleFontColor: "#666",
-            scaleShowLabelBackdrop: true,
-            scaleBackdropColor: "rgba(255,255,255,0.75)",
-            scaleBackdropPaddingY: 2,
-            scaleBackdropPaddingX: 2,
-            angleShowLineOut: true,
-            angleLineColor: "rgba(0,0,0,.1)",
-            angleLineWidth: 1,
-            pointLabelFontFamily: "'Arial'",
-            pointLabelFontStyle: "normal",
-            pointLabelFontSize: 12,
-            pointLabelFontColor: "#666",
-            pointDot: true,
-            pointDotRadius: 3,
-            pointDotStrokeWidth: 1,
-            datasetStroke: true,
-            datasetStrokeWidth: 2,
-            datasetFill: true,
-            animation: true,
-            animationSteps: 60,
-            animationEasing: "easeOutQuart",
-            onAnimationComplete: null
-        };
-
-        var config = (options) ? mergeChartConfig(chart.Radar.defaults, options) : chart.Radar.defaults;
-
-        return new Radar(data, config, context);
-    };
-
     this.Pie = function(data, options) {
         chart.Pie.defaults = {
             segmentShowStroke: true,
@@ -554,95 +474,6 @@ var Chart = function(context) {
 
         return new Pie(data, config, context);
     };
-
-    this.Doughnut = function(data, options) {
-
-        chart.Doughnut.defaults = {
-            segmentShowStroke: true,
-            segmentStrokeColor: "#fff",
-            segmentStrokeWidth: 2,
-            percentageInnerCutout: 50,
-            animation: true,
-            animationSteps: 100,
-            animationEasing: "easeOutBounce",
-            animateRotate: true,
-            animateScale: false,
-            onAnimationComplete: null
-        };
-
-        var config = (options) ? mergeChartConfig(chart.Doughnut.defaults, options) : chart.Doughnut.defaults;
-
-        return new Doughnut(data, config, context);
-
-    };
-
-    this.Line = function(data, options) {
-
-        chart.Line.defaults = {
-            scaleOverlay: false,
-            scaleOverride: false,
-            scaleSteps: null,
-            scaleStepWidth: null,
-            scaleStartValue: null,
-            scaleLineColor: "rgba(0,0,0,.1)",
-            scaleLineWidth: 1,
-            scaleShowLabels: true,
-            scaleLabel: "<%=value%>",
-            scaleFontFamily: "'Arial'",
-            scaleFontSize: 12,
-            scaleFontStyle: "normal",
-            scaleFontColor: "#666",
-            scaleShowGridLines: true,
-            scaleGridLineColor: "rgba(0,0,0,.05)",
-            scaleGridLineWidth: 1,
-            bezierCurve: true,
-            pointDot: true,
-            pointDotRadius: 4,
-            pointDotStrokeWidth: 2,
-            datasetStroke: true,
-            datasetStrokeWidth: 2,
-            datasetFill: true,
-            animation: true,
-            animationSteps: 60,
-            animationEasing: "easeOutQuart",
-            onAnimationComplete: null
-        };
-        var config = (options) ? mergeChartConfig(chart.Line.defaults, options) : chart.Line.defaults;
-
-        return new Line(data, config, context);
-    }
-
-    this.Bar = function(data, options) {
-        chart.Bar.defaults = {
-            scaleOverlay: false,
-            scaleOverride: false,
-            scaleSteps: null,
-            scaleStepWidth: null,
-            scaleStartValue: null,
-            scaleLineColor: "rgba(0,0,0,.1)",
-            scaleLineWidth: 1,
-            scaleShowLabels: true,
-            scaleLabel: "<%=value%>",
-            scaleFontFamily: "'Arial'",
-            scaleFontSize: 12,
-            scaleFontStyle: "normal",
-            scaleFontColor: "#666",
-            scaleShowGridLines: true,
-            scaleGridLineColor: "rgba(0,0,0,.05)",
-            scaleGridLineWidth: 1,
-            barShowStroke: true,
-            barStrokeWidth: 2,
-            barValueSpacing: 5,
-            barDatasetSpacing: 1,
-            animation: true,
-            animationSteps: 60,
-            animationEasing: "easeOutQuart",
-            onAnimationComplete: null
-        };
-        var config = (options) ? mergeChartConfig(chart.Bar.defaults, options) : chart.Bar.defaults;
-
-        return new Bar(data, config, context);
-    }
 
     var clear = function(c) {
         c.clearRect(0, 0, width, height);
