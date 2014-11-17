@@ -3,13 +3,7 @@
     <%= image_tag "unnamed.png", size: "45" %>ubscribble
     <small>Save Time, Save Money, Save Hassle</small></h1>
 </div>
-<div class="alert alert-warning alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-  <strong>Warning:
-  </strong>Your
-  <a href="#" class="alert-link">Netflix</a>
-  subscription is going to expire within a week.
-</div>
+
 <input type="button" id="import-gmail" data-confirm="The Application Subscribble is requesting permission to access your Google Account" value="Import Subscriptions from Email" />
 <h3>Your Subscriptions</h3>
 
@@ -30,7 +24,7 @@
         <td>
           <i class="glyphicon <%= tag_hash[subscription.tag] %>"></i>
           <%= subscription.name %></td>
-        <td>$<%= subscription.price %><small><% if subscription.monthly %>/mo<% else %>/yr<%end%></small></td>
+        <td>$<%= subscription.price %><small><% unless subscription.monthly %>/mo<% else %>/yr<%end%></small></td>
         <td><%= subscription.pay_date.to_formatted_s(:long_ordinal)[0..-7] %></td>
         <td><%= subscription.exp_date.to_formatted_s(:long_ordinal) %></td>
         <td><a href=<%= subscription_path(subscription) %>><button class="btn btn-primary" id="destroy">
@@ -55,10 +49,15 @@
 <hr>
 <br>
 <h3>Your Spending</h3>
+<hr>
+<% unless @subscriptions.empty? %>
+<h4>Your total cost for subscriptions this month is <strong>$<%= @money[0] %></strong>.</h4>
+<h4>Your annual subscription cost is <strong>$<%= @money[1] %></strong>.</p>
 <br>
+<%else%>
+<p>Add some subscriptions to see statistics here.</p>
+<% end %>
 <div>
-  <%=image_tag "graph1.png"%>
-  <%=image_tag "graph2.png"%>
   <canvas id="myChart" width="400" height="400"></canvas>
 </div>
 <br>

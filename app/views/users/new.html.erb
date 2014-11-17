@@ -1,7 +1,67 @@
-<div class="centered">
+	<div class="row">
+            <%= image_tag "Logo-Subscribble-Green.png", size: "50%" %>
+    </div>
+    <div class="row">
+        <div class="page-header">
+            <h1>Less Time. More Savings. No Hassle.<small>  Organize your subscriptions.</small></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="jumbotron">
+                <h1>What is Subscribble?</h1>
+                <h2>One subscription to rule them all.</h2>
+                <footer><em></em><footer>
+            </div>
+            </div>
 
-<h1>Sign Up for Subscribble</h1>
+        <div class="col-sm-4">
+            <div class="row centered-form">
+                <div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Sign up with us. <small>It's free!</small></h3>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                </div>
 
-<%= render 'form' %>
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                                </div>
 
-</div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="/subscriptions"><input type="submit" value="Register" class="btn btn-block" style="background-color:#006a2c!important; color:White;" ></a>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+

@@ -5,6 +5,11 @@ class SubscriptionsController < ApplicationController
   def index
     # @user = User.find(session[:id])
     @subscriptions = Subscription.all
+    @money = [0,0]
+    @subscriptions.each do |s|
+      @money[0] += s.price
+    end
+    @money[1] = (@money[0] - 79)*12 
   end
 
   # GET /subscriptions/1

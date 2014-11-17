@@ -16,6 +16,7 @@
 //= require_tree .
 
 $(function() {
+    $("#alert").hide();
     var popup = new jBox('Confirm', {
         title: 'Request Access',
         confirmButton: 'Do it!',
@@ -111,7 +112,6 @@ $(function() {
         labelFontSize: 25
     });
 
-    console.table(data);
 
     var ctx = $("#myChart").get(0).getContext("2d");
     new Chart(ctx).Pie(data, options);
@@ -158,7 +158,7 @@ var dothis = function() {
         success: function(data) {
             $(".spinner").remove();
             console.log(data);
-
+            $("#alert").show();
         },
         dataType: "json"
     });
@@ -178,71 +178,69 @@ var subs = [{
     "name": "Netflix",
     "price": 18,
     "tag": "Movies",
-    "monthly": true,
     "url": "https://www.netflix.com/YourAccount?lnkctr=mhSS",
     "exp_date": "2014-11-22",
     "pay_date": "2014-11-18"
 }, {
     "name": "Hulu",
-    "price": 15,
+    "price": 8,
     "tag": "Movies",
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
-}, {
-    "name": "Maxim Magazine",
-    "price": 30,
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
+    "exp_date": "2015-02-15",
+    "pay_date": "2014-11-20"
+// }, {
+//     "name": "Maxim Magazine",
+//     "price": 30,
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
 }, {
     "name": "Time Magazine",
-    "price": 45,
+    "price": 6,
     "tag": "Print",
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
+    "exp_date": "2015-05-28",
+    "pay_date": "2014-11-30"
 }, {
     "name": "Gym membership",
-    "price": 27,
+    "price": 50,
     "tag": "Fitness",
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
+    "exp_date": "2015-04-01",
+    "pay_date": "2014-12-02"
 }, {
     "name": "Pandora",
-    "price": 15,
+    "price": 4,
     "tag": "Music",
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
+    "exp_date": "2015-09-01",
+    "pay_date": "2014-12-03"
 }, {
     "name": "Spotify",
-    "price": 21,
+    "price": 10,
     "tag": "Music",
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
+    "exp_date": "2014-07-31",
+    "pay_date": "2014-12-07"
 }, {
     "name": "Dollar Shave Club",
-    "price": 42,
+    "price": 1,
     "tag": "Shopping",
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
+    "exp_date": "2015-08-15",
+    "pay_date": "2014-12-07"
 }, {
-    "name": "AOL Music",
-    "price": 23,
-    "tag": "Music",
-    "exp_date": "2014-11-15",
-    "pay_date": "2014-11-15"
+//     "name": "AOL Music",
+//     "price": 23,
+//     "tag": "Music",
+//     "exp_date": "2014-11-15",
+//     "pay_date": "2014-11-15"
+// }, {
+    "name": "Fitness Pal",
+    "price": 5,
+    "tag": "Fitness",
+    "exp_date": "2015-03-20",
+    "pay_date": "2014-12-12"
 }, {
     "name": "Amazon Prime",
     "price": 79,
     "tag": "Shopping",
-    "annual": true,
-    "exp_date": "2015-06-04",
-    "pay_date": "2015-06-04"
-}, {
-    "name": "Fitness Pal",
-    "price": 5,
-    "tag": "Fitness",
     "monthly": true,
-    "exp_date": "2015-03-20",
-    "pay_date": "2014-12-12"
+    "exp_date": "2015-06-04",
+    "pay_date": "2015-05-29"
         // }, {
         //     "name": "Roku",
         //     "price": 8,
